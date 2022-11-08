@@ -11,3 +11,8 @@ Then the computer randomly selects one of the three options, and the program che
 There are 10 rounds, and the final winner is the one who has more point than the other.
 
 ![image](https://user-images.githubusercontent.com/65062036/200643349-52b45033-6e46-45fe-924e-770202b3e42c.png)
+
+
+## How To Play?
+
+Go to the [live game site](https://www.heyprakhar.xyz/rock-paper-scissors) and open the dev tools in your browser. Then open the console in dev tools and start playing the game by giving your input in the prompt.
