@@ -5,19 +5,21 @@ function getComputerChoice(){
 }
 
 
-function game_engine(computer_choice, player_choice){
+function game_engine(computer_choice, player_choice_){
     let result;
     let action;
     let who_won;
-    player_choice = player_choice.toLowerCase();
+    let player_choice = player_choice_.toLowerCase();
 
-    if(player_choice!="rock"||"paper"||"scissors"){
-        result = "won by Computer!"
-        action = "You didn't chose a valid option, so computer wins"
-        who_won = "c"
+    if(player_choice!="rock"&&player_choice!="paper"&&player_choice!="scissors"){
+        result = "won by Computer!";
+        action = "You didn't chose a valid option, so computer wins";
+        who_won = "c";
+        return [result, action, who_won];
 
     }
-    else if (computer_choice == player_choice) {
+
+    if (computer_choice == player_choice) {
         result = "DRAW"
         action = "Both are equally powerful!"
         who_won = "none"
