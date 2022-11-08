@@ -11,11 +11,18 @@ function game_engine(computer_choice, player_choice){
     let who_won;
     player_choice = player_choice.toLowerCase();
 
-    if (computer_choice == player_choice) {
+    if(player_choice!="rock"||"paper"||"scissors"){
+        result = "won by Computer!"
+        action = "You didn't chose a valid option, so computer wins"
+        who_won = "c"
+
+    }
+    else if (computer_choice == player_choice) {
         result = "DRAW"
         action = "Both are equally powerful!"
         who_won = "none"
     }
+
     
     else if (computer_choice=="rock" && player_choice=="paper"){
         result = "won by You!"
@@ -58,13 +65,13 @@ function playRound(){
     let player_choice = prompt("Rock, Paper, or Scissors?");
     let computer_choice = getComputerChoice()
     let output_text = game_engine(computer_choice, player_choice);
-    // console.log("You chose", player_choice, "and the Computer chose", computer_choice, "\n", output_text[1], "\n and therefore The game is", output_text[0]);
     let game_Results = `You chose ${player_choice} and Computer chose ${computer_choice}\n${output_text[1]}`
     winner = output_text[2]
     return [game_Results, winner]
 }
 
 function mainGame(){
+    console.log("ROCK-PAPER-SCISSORS GAME\nRule: If you don't chose a valid option, then the round will be won by computer.")
     let computer_points = 0;
     let human_points = 0;
     for (let i = 1; i<11; i++){
